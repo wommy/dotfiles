@@ -1,3 +1,6 @@
 [submodule ".config/nvim/pack/w0m/start/emmet-vim"]
 	path = .config/nvim/pack/w0m/start/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule ".config/nvim/pack/w0m/start/vimwiki"]
+	path = .config/nvim/pack/w0m/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
