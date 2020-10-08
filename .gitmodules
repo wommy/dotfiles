@@ -4,3 +4,6 @@
 [submodule ".config/nvim/pack/w0m/start/vimwiki"]
 	path = .config/nvim/pack/w0m/start/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule ".config/nvim/pack/w0m/start/vim-surround"]
+	path = .config/nvim/pack/w0m/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
