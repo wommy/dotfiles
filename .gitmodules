@@ -7,3 +7,6 @@
 [submodule ".config/nvim/pack/w0m/start/vim-surround"]
 	path = .config/nvim/pack/w0m/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule ".config/nvim/pack/w0m/start/auto-pairs"]
+	path = .config/nvim/pack/w0m/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
