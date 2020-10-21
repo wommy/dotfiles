@@ -13,3 +13,6 @@
 [submodule ".config/nvim/pack/w0m/start/vim-prettier"]
 	path = .config/nvim/pack/w0m/start/vim-prettier
 	url = https://github.com/prettier/vim-prettier.git
+[submodule ".config/nvim/pack/w0m/start/Vim-Jinja2-Syntax"]
+	path = .config/nvim/pack/w0m/start/Vim-Jinja2-Syntax
+	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
