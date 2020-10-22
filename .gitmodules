@@ -19,3 +19,6 @@
 [submodule ".config/nvim/pack/w0m/start/vim-fugitive"]
 	path = .config/nvim/pack/w0m/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".config/nvim/pack/w0m/start/vim-airline"]
+	path = .config/nvim/pack/w0m/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
