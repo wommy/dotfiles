@@ -28,3 +28,6 @@
 [submodule ".config/nvim/pack/w0m/start/vim-polyglot"]
 	path = .config/nvim/pack/w0m/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+[submodule ".config/nvim/pack/w0m/start/YouCompleteMe"]
+	path = .config/nvim/pack/w0m/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
