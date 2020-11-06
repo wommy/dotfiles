@@ -31,3 +31,6 @@
 [submodule ".config/nvim/pack/w0m/start/YouCompleteMe"]
 	path = .config/nvim/pack/w0m/start/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule ".config/nvim/pack/w0m/start/vim-commentary"]
+	path = .config/nvim/pack/w0m/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
