@@ -2,23 +2,9 @@
 
 ## quickstart
 
-  - 1st
-    - `git submodule add `
-    - PASTE IN GITHUB URL
-      - https://github.com/tpope/vim-surround
-	- `https://github.com/`
-	- AUTHOR_NAME
-	- `/`
-	- PLUGIN_NAME
-    - `.git .config/nvim/pack/w0m/start/`
-    - TYPE PLUGIN_NAME
-  - 2nd
-    - `git add .gitmodules .config/nvim/pack/w0m/start/`
-    - TYPE PLUGIN_NAME
-  - 3rd
-    - `git commit -m 'added `
-    - PLUGIN_NAME
-    - ` to nvim`
+  1. `git submodule add ${GITHUB_REPO_URL}.git .config/nvim/pack/w0m/start/${PLUGIN_NAME}`
+  2. `git add .gitmodules .config/nvim/pack/w0m/start/${PLUGIN_NAME}`
+  3. `git commit -m 'added ${PLUGIN_NAME} to nvim'`
 
 ## nvim
 
