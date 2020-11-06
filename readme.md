@@ -2,9 +2,9 @@
 
 ## quickstart
 
-  1. `git submodule add ${GITHUB_REPO_URL}.git .config/nvim/pack/w0m/start/${PLUGIN_NAME}`
-  2. `git add .gitmodules .config/nvim/pack/w0m/start/${PLUGIN_NAME}`
-  3. `git commit -m 'added ${PLUGIN_NAME} to nvim'`
+  1. `git submodule add ` `${GITHUB_REPO_URL}` `.git .config/nvim/pack/w0m/start/` `${PLUGIN_NAME}`
+  2. `git add .gitmodules .config/nvim/pack/w0m/start/` `${PLUGIN_NAME}`
+  3. `git commit -m 'added ` `${PLUGIN_NAME}` ` to nvim'`
 
 ## nvim
 
