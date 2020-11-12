@@ -2,15 +2,11 @@
 
 ## quickstart
 
-  1. 
-    - `git submodule add `  
-    - `${GITHUB_SSH_PATH}`
-    - ` .config/nvim/pack/w0m/start/`
-    - `${PLUGIN_NAME}`
-  3. 
-    - `git add .gitmodules .config/nvim/pack/w0m/start/`
-    - `${PLUGIN_NAME}`
-  5. `git commit -m 'added ` `${PLUGIN_NAME}` ` to nvim'`
+1. git submodule add `${ GITHUB_SSH_PATH }` .config/nvim/pack/w0m/start/ `${PLUGIN_NAME}`
+
+2. git add .gitmodules .config/nvim/pack/w0m/start/ `${PLUGIN_NAME}`
+
+3. git commit
 
 ## nvim
 
@@ -36,6 +32,7 @@ https://shapeshed.com/vim-packages/
 - `ln -s ~/projects_current/dotfiles/.config/nvim/pack ~/.local/share/nvim/site/`
 - tmux
 - zsh
+- fish
 
 ## other links
 
