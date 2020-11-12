@@ -2,9 +2,15 @@
 
 ## quickstart
 
-  1. `git submodule add ` `${GITHUB_REPO_URL}` `.git .config/nvim/pack/w0m/start/` `${PLUGIN_NAME}`
-  2. `git add .gitmodules .config/nvim/pack/w0m/start/` `${PLUGIN_NAME}`
-  3. `git commit -m 'added ` `${PLUGIN_NAME}` ` to nvim'`
+  1. 
+    - `git submodule add `  
+    - `${GITHUB_SSH_PATH}`
+    - ` .config/nvim/pack/w0m/start/`
+    - `${PLUGIN_NAME}`
+  3. 
+    - `git add .gitmodules .config/nvim/pack/w0m/start/`
+    - `${PLUGIN_NAME}`
+  5. `git commit -m 'added ` `${PLUGIN_NAME}` ` to nvim'`
 
 ## nvim
 
@@ -20,12 +26,18 @@ https://shapeshed.com/vim-packages/
 
 
 ## [symbolic links](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/#creating-symlinks-to-a-directory)
+### formula
 
-`ln -s ~/projects_current/dotfiles/.config/nvim ~/.config/nvim`
+`ln -s ~/projects_current/dotfiles/` var ` ~/` var
 
-`ln -s ~/projects_current/dotfiles/.config/nvim/pack ~/.local/share/nvim/site/`
+### list of 
+
+- `ln -s ~/projects_current/dotfiles/.config/nvim ~/.config/nvim`
+- `ln -s ~/projects_current/dotfiles/.config/nvim/pack ~/.local/share/nvim/site/`
+- tmux
+- zsh
 
 ## other links
 
 why i chose [.local path](https://stackoverflow.com/questions/48700563/how-do-i-install-plugins-in-neovim-correctly)
-
+$XDG_CONFIG_HOME
