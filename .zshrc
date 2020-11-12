@@ -92,3 +92,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 # .config
 export DOT_CONFIG="$HOME/.config"
 
+# java
+export JAVA_HOME="/usr/lib/jvm/java-14-openjdk/"
+export PATH=$PATH:$JAVA_HOME/bin/
