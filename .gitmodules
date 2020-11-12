@@ -34,3 +34,6 @@
 [submodule ".config/nvim/pack/w0m/start/vim-commentary"]
 	path = .config/nvim/pack/w0m/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule ".config/nvim/pack/w0m/start/vim-slumlord"]
+	path = .config/nvim/pack/w0m/start/vim-slumlord
+	url = https://github.com/scrooloose/vim-slumlord.git
