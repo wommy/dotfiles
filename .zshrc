@@ -92,7 +92,3 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 # .config
 export DOT_CONFIG="$HOME/.config"
 
-# rubygems
-export RUBYGEMS="$HOME/.gem/ruby/2.7.0"
-export PATH="$RUBYGEMS/bin:$PATH"
-alias jekyll="bundle exec jekyll"
