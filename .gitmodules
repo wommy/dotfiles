@@ -34,6 +34,9 @@
 [submodule ".config/nvim/pack/w0m/start/vim-commentary"]
 	path = .config/nvim/pack/w0m/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule ".config/nvim/pack/w0m/start/vim-slumlord"]
-	path = .config/nvim/pack/w0m/start/vim-slumlord
-	url = https://github.com/scrooloose/vim-slumlord.git
+[submodule ".config/nvim/pack/w0m/start/open-browser.vim"]
+	path = .config/nvim/pack/w0m/start/open-browser.vim
+	url = git@github.com:tyru/open-browser.vim.git
+[submodule ".config/nvim/pack/w0m/start/plantuml-previewer.vim"]
+	path = .config/nvim/pack/w0m/start/plantuml-previewer.vim
+	url = git@github.com:weirongxu/plantuml-previewer.vim.git
