@@ -1,11 +1,29 @@
-set shiftwidth=2
-set tabstop=2
-
 set nocompatible
 filetype plugin on
 syntax on
 
+let g:netrw_winsize = 25
+let g:netrw_liststyle = 3
+
 colorscheme sublimemonokai
+" let g:sublimemonokai_term_italic = 1
+
+set shiftwidth=2
+set tabstop=2
+
+set number
+set relativenumber
+set nowrap
+
+set autoindent
+set smartindent
+
+set breakindent
+set breakindentopt=shift:2,min:40,sbr
+set showbreak=>>
+
+nmap <F3> i<C-R>=strftime("%m-%d")<CR><Esc>
+imap <F3> <C-R>=strftime("%m-%d")<CR>
 
 call plug#begin('~/projects_current/dotfiles/.config/nvim/plugged')
 
@@ -27,3 +45,4 @@ Plug 'tyru/open-browser.vim'
 
 call plug#end()
 
+let g:vimwiki_list = [{'path': '~/projects_current/rd/vimwiki/'}]
