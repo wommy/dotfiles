@@ -95,3 +95,4 @@ export DOT_CONFIG="$HOME/.config"
 # java
 export JAVA_HOME="/usr/lib/jvm/java-14-openjdk/"
 export PATH=$PATH:$JAVA_HOME/bin/
+source /usr/share/nvm/init-nvm.sh
