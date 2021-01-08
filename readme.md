@@ -1,5 +1,9 @@
 # init
 
+## TODO
+
+- [ ] finish aliases
+
 ## quickstart
 
 1. git submodule add `${ GITHUB_SSH_PATH }` .config/nvim/pack/w0m/start/ `${PLUGIN_NAME}`
@@ -25,6 +29,8 @@ https://shapeshed.com/vim-packages/
 ### formula
 
 `ln -s ~/projects_current/dotfiles/`+var ` ~/`+var
+
+`ln -s FROM TO`
 
 ### list of 
 
