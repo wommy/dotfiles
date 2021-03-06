@@ -43,6 +43,8 @@ https://shapeshed.com/vim-packages/
 - i3
 	- `mv ~/.config/i3 ~/projects_current/dotfiles/.config/i3`
 	- `ln -s /home/w0m/projects_current/dotfiles/.config/i3/ ~/.config/i3`
+- mpv
+  - `ln -s /home/w0m/projects_current/dotfiles/.config/mpv ~/.config/`
 
 ## other links
 
