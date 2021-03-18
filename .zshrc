@@ -70,8 +70,9 @@ alias pushit="git add .; git commit; git push"
 # redshift
 alias redshift="redshift -P -O 4000"
 
-# pypy
+# python
 alias py="pypy3"
+alias pip="pip3"
 
 # mpv | help:  youtube-dl --list-formats URL
 alias mpv="mpv --ytdl-format=22 $1"
