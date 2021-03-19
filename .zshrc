@@ -66,12 +66,13 @@ alias rdnew="rddate; rdsbj $1"
 
 # pushit
 alias pushit="git add .; git commit; git push"
+alias pushif="git add .; git commit -m 'fixup pushit'; git push"
 
 # redshift
 alias redshift="redshift -P -O 4000"
 
 # python
-alias py="pypy3"
+alias py="python3"
 alias pip="pip3"
 
 # mpv | help:  youtube-dl --list-formats URL
