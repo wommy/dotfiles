@@ -77,7 +77,8 @@ alias pip="pip3"
 # mpv | help:  youtube-dl --list-formats URL
 alias mpv="mpv --ytdl-format=22 $1"
 # mpv audio
-alias mpvA="mpv --ytdl-format=251 $1 --loop"
+alias mpvA="mpv --ytdl-format=251 $1"
+alias mpvAl="mpv --ytdl-format=251 $1 --loop"
 
 #
 ###### other
