@@ -65,8 +65,7 @@ alias rdsbj='echo $1 >> ./$(date +"%m-%d").md'
 alias rdnew="rddate; rdsbj $1"
 
 # pushit
-alias pushit="git add .; git commit; git push"
-alias pushif="git add .; git commit -m 'fixup pushit'; git push"
+alias pushit="git commit -am 'pushit fixup'; git push"
 
 # redshift
 alias redshift="redshift -P -O 4000"
@@ -76,10 +75,17 @@ alias py="python3"
 alias pip="pip3"
 
 # mpv | help:  youtube-dl --list-formats URL
-alias mpv="mpv --ytdl-format=22 $1"
+# alias mpv="mpv --ytdl-format=22 $1"
 # mpv audio
-alias mpvA="mpv --ytdl-format=251 $1"
-alias mpvAl="mpv --ytdl-format=251 $1 --loop"
+# alias mpvA="mpv --ytdl-format=251 $1"
+# alias mpvAl="mpv --ytdl-format=251 $1 --loop"
+
+# i got that mpv .lua script, dunno if i need these anymore
+# --no-video --loop
+
+# rd
+alias rd="cd ~/Documents/rd; nvim rd.md;"
+
 
 #
 ###### other
