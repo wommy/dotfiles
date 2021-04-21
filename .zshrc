@@ -84,7 +84,7 @@ alias pip="pip3"
 # --no-video --loop
 
 # rd
-alias rd="cd ~/Documents/rd; nvim rd.md;"
+alias rd="cd ~/Documents/_rd; nvim rd.md;"
 
 
 #
