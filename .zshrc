@@ -53,9 +53,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # browser-sync
 alias bsstart="sudo browser-sync start -s --host 0.0.0.0 --no-open"
 
-# todo.txt
-alias t="sudo todo.sh"
-
 # ls: dir first, colors
 alias ls="ls --group-directories-first --color=auto -a"
 
