@@ -62,7 +62,7 @@ alias rdsbj='echo $1 >> ./$(date +"%m-%d").md'
 alias rdnew="rddate; rdsbj $1"
 
 # pushit
-alias pushit="git commit -am 'pushit fixup'; git push"
+alias pushit="git commit -am 'fixup; pushit'; git push"
 
 # redshift
 alias redshift="redshift -P -O 4000"
