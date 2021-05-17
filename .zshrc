@@ -80,9 +80,30 @@ alias pip="pip3"
 # i got that mpv .lua script, dunno if i need these anymore
 # --no-video --loop
 
+# pushd | popd | dirs -v
+alias cd="pushd"
+
 # rd
 alias rd="cd ~/Documents/_rd; nvim rd.md;"
 
+# mkrepo
+# alias mkrepo='
+# 	mkdir $1
+# 	cd $1
+# 	echo '# $1' >> README.md
+# 	git init
+# 	gh repo create
+# 	popd
+# 	vscodium $1
+# '
+# mkdir jegan-redo
+# cd jegan-redo
+# echo "# jegan-redo" >> README.md
+# git init
+# gh repo create
+# popd
+# mv jegan-redo redo
+# vscodium redo
 
 #
 ###### other
@@ -106,3 +127,4 @@ export DOT_CONFIG="$HOME/.config"
 export JAVA_HOME="/usr/lib/jvm/java-14-openjdk/"
 export PATH=$PATH:$JAVA_HOME/bin/
 source /usr/share/nvm/init-nvm.sh
+

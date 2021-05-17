@@ -18,6 +18,8 @@ set nowrap
 set autoindent
 set smartindent
 
+set clipboard+=unnamedplus
+
 set breakindent
 set breakindentopt=shift:2,min:40,sbr
 set showbreak=>>
