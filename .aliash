@@ -1,0 +1,55 @@
+# browser-sync
+alias bsstart="sudo browser-sync start -s --host 0.0.0.0 --no-open"
+
+# ls: dir first, colors
+alias ls="ls --group-directories-first --color=auto -a"
+
+# rd stuffs
+alias rddate="echo $(date) >> ./$(date +'%m-%d').md"
+alias rdsbj='echo $1 >> ./$(date +"%m-%d").md'
+alias rdnew="rddate; rdsbj $1"
+
+# pushit
+alias pushit="git commit -am 'fixup; pushit'; git push"
+
+# redshift
+alias redshift="redshift -P -O 4000"
+
+# python
+alias py="python3"
+alias pip="pip3"
+
+# mpv | help:  youtube-dl --list-formats URL
+# alias mpv="mpv --ytdl-format=22 $1"
+# mpv audio
+# alias mpvA="mpv --ytdl-format=251 $1"
+# alias mpvAl="mpv --ytdl-format=251 $1 --loop"
+
+# i got that mpv .lua script, dunno if i need these anymore
+# --no-video --loop
+
+# pushd | popd | dirs -v
+alias cd="pushd"
+
+# rd
+alias rd="cd ~/Documents/_rd; nvim rd.md;"
+
+# mkrepo
+# alias mkrepo='
+# 	mkdir $1
+# 	cd $1
+# 	echo '# $1' >> README.md
+# 	git init
+# 	gh repo create
+# 	popd
+# 	vscodium $1
+# '
+# mkdir jegan-redo
+# cd jegan-redo
+# echo "# jegan-redo" >> README.md
+# git init
+# gh repo create
+# popd
+# mv jegan-redo redo
+# vscodium redo
+

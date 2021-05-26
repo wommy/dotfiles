@@ -45,6 +45,8 @@ https://shapeshed.com/vim-packages/
 	- `ln -s /home/w0m/projects_current/dotfiles/.config/i3/ ~/.config/i3`
 - mpv
   - `ln -s /home/w0m/projects_current/dotfiles/.config/mpv ~/.config/`
+- aliash
+	- `ln -s projects_current/dotfiles/.aliash ~/`
 
 ## other links
 
