@@ -2,7 +2,7 @@
 
 # basic definitions
 set $mod Mod4
-set $gaps_inner 20
+set $gaps_inner 0
 
 # gaps
 gaps inner $gaps_inner
@@ -26,7 +26,7 @@ bindsym $mod+grave scratchpad show
 
 # i3bar
 bar {
-	font pango:DejaVu Sans Mono 12
+	font pango:DejaVu Sans Mono 6
 	status_command LC_ALL=en_US.utf8 i3status
 	position top
 }
