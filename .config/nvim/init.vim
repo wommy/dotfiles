@@ -7,9 +7,9 @@ syntax on
 " imap <SUPER> <C-R>=strftime("%m-%d")<CR>
 
 " https://shapeshed.com/vim-netrw/
-let g:netrw_winsize = 25
+let g:netrw_winsize = 75
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 1
+let g:netrw_browse_split = 3
 
 colorscheme sublimemonokai
 " let g:sublimemonokai_term_italic = 1
