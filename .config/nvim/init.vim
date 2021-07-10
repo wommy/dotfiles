@@ -2,8 +2,14 @@ set nocompatible
 filetype plugin on
 syntax on
 
+" in write mode, map super to esc
+" nmap <F3> i<C-R>=strftime("%m-%d")<CR><Esc>
+" imap <SUPER> <C-R>=strftime("%m-%d")<CR>
+
+" https://shapeshed.com/vim-netrw/
 let g:netrw_winsize = 25
 let g:netrw_liststyle = 3
+let g:netrw_browse_split = 1
 
 colorscheme sublimemonokai
 " let g:sublimemonokai_term_italic = 1
