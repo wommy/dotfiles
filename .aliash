@@ -1,3 +1,20 @@
+#!/bin/bash
+# my sh alias, aliam alias < latin
+
+# found this old alias folder, sticking it here
+##!/bin/bash
+# new md file for blogposts
+
+# pseudo code || what i want to accomplish
+# new file w/ name of (date in MM-DD)-(topic).md
+#
+# vars
+#	1	$(date +'%m-%d')
+# 2	topic
+#
+# what i want to type
+# mdnew topic >> ./$(date +'%m-%d')-$1.md
+
 # browser-sync
 alias bsstart="sudo browser-sync start -s --host 0.0.0.0 --no-open"
 
