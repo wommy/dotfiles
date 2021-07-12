@@ -15,6 +15,10 @@
 # what i want to type
 # mdnew topic >> ./$(date +'%m-%d')-$1.md
 
+# found another one
+# alias mpv="mpv --ytdl-format=22 $1"
+alias gitlog="git log --online --abrev-commit --decorate"
+
 # browser-sync
 alias bsstart="sudo browser-sync start -s --host 0.0.0.0 --no-open"
 
