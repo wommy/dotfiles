@@ -12,6 +12,7 @@ bar {
 	font pango:DejaVu Sans Mono 8
 	status_command LC_ALL=en_US.utf8 i3status
 	position top
+	mode hide
 }
 # dota workspace9
 # assign [class="dota2"] 9
