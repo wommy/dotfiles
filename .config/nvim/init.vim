@@ -12,6 +12,7 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 3
 
 colorscheme sublimemonokai
+hi Normal ctermbg=NONE guibg=NONE
 " let g:sublimemonokai_term_italic = 1
 
 set shiftwidth=2
