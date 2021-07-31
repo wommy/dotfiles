@@ -30,7 +30,7 @@ local StreamSource = Set {
 local changedQuality = 720
 
 -- Affects matched and non-matched domains
-local enableVP9 = false
+local enableVP9 = true
 local FPSLimit = 30
 
 -- Do not edit from here on
