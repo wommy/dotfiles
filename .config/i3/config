@@ -11,7 +11,7 @@ bindsym $mod+grave scratchpad show
 bar {
 	font pango:DejaVu Sans Mono 8
 	status_command LC_ALL=en_US.utf8 i3status
-	position top
+#	position top
 	mode hide
 }
 # dota workspace9
