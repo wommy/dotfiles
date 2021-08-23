@@ -11,15 +11,12 @@ let g:netrw_winsize = 75
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 3
 
-" for picom
-hi Normal ctermbg=NONE guibg=NONE
-
-set shiftwidth=2
-set tabstop=2
-
 set number
 set relativenumber
 set nowrap
+
+set shiftwidth=2
+set tabstop=2
 
 set autoindent
 set smartindent
@@ -30,12 +27,13 @@ set breakindent
 set breakindentopt=shift:2,min:40,sbr
 set showbreak=>>
 
-nmap <F3> i<C-R>=strftime("%m-%d")<CR><Esc>
-imap <F3> <C-R>=strftime("%m-%d")<CR>
-
 set foldmethod=indent
 set foldlevelstart=2
 set foldlevel=2
+
+" rd maps i dont use anymore
+" nmap <F3> i<C-R>=strftime("%m-%d")<CR><Esc>
+" imap <F3> <C-R>=strftime("%m-%d")<CR>
 
 "
 " primeagen VIM REMAPS
@@ -61,6 +59,8 @@ inoremap <C-j> <esc>:m .+1<CR>==
 inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
+
+"""plug"""
 
 call plug#begin('~/projects_current/dotfiles/.config/nvim/plugged')
 
@@ -95,6 +95,8 @@ let g:dracula_colorterm = 0
 colorscheme dracula
 " colorscheme sublimemonokai
 " let g:sublimemonokai_term_italic = 1
-
+" picom w/ ^
+" hi Normal ctermbg=NONE guibg=NONE
 
 let g:vimwiki_list = [{'path': '~/projects_current/rd/vimwiki/'}]
+
