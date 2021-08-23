@@ -11,9 +11,8 @@ let g:netrw_winsize = 75
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 3
 
-colorscheme sublimemonokai
+" for picom
 hi Normal ctermbg=NONE guibg=NONE
-" let g:sublimemonokai_term_italic = 1
 
 set shiftwidth=2
 set tabstop=2
@@ -33,6 +32,10 @@ set showbreak=>>
 
 nmap <F3> i<C-R>=strftime("%m-%d")<CR><Esc>
 imap <F3> <C-R>=strftime("%m-%d")<CR>
+
+set foldmethod=indent
+set foldlevelstart=2
+set foldlevel=2
 
 "
 " primeagen VIM REMAPS
@@ -61,22 +64,37 @@ nnoremap <leader>k :m .-2<CR>==
 
 call plug#begin('~/projects_current/dotfiles/.config/nvim/plugged')
 
+" needed
 Plug 'sheerun/vim-polyglot'
+Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
-Plug 'ErichDonGubler/vim-sublime-monokai'
-Plug 'ycm-core/YouCompleteMe'
-Plug 'prettier/vim-prettier'
 Plug 'vim-airline/vim-airline'
 
+" dunno what these do
+Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-fugitive'
-Plug 'mattn/emmet-vim'
 Plug 'vimwiki/vimwiki'
 
-Plug 'aklt/plantuml-syntax'
-Plug 'weirongxu/plantuml-previewer.vim' 
-Plug 'tyru/open-browser.vim'
+" ? FIXME
+" Plug 'ycm-core/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'dracula/vim', {'as':'dracula'}
+
+" couldnt find this again if i tried, dont think id even want to
+" plantuml
+" Plug 'aklt/plantuml-syntax'
+" Plug 'weirongxu/plantuml-previewer.vim' 
+" Plug 'tyru/open-browser.vim'
 
 call plug#end()
+
+let g:dracula_colorterm = 0
+colorscheme dracula
+" colorscheme sublimemonokai
+" let g:sublimemonokai_term_italic = 1
+
 
 let g:vimwiki_list = [{'path': '~/projects_current/rd/vimwiki/'}]
