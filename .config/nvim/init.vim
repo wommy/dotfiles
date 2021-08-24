@@ -21,6 +21,8 @@ set tabstop=2
 set autoindent
 set smartindent
 
+set so=999
+
 set clipboard+=unnamedplus
 
 set breakindent
