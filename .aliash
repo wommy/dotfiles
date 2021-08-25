@@ -52,7 +52,9 @@ alias pip="pip3"
 alias cd="pushd"
 
 # rd
-alias rd="cd ~/rd; nvim $(hostname).md;"
+alias rd="cd ~/rd; git pull; nvim $(hostname).md;"
+# dotfiles
+alias df="cd ~/Documents/dotfiles; git pull;"
 
 # mkrepo
 # alias mkrepo='
