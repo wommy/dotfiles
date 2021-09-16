@@ -41,6 +41,9 @@ alias redshift="redshift -P -O 4000"
 alias py="python3"
 alias pip="pip3"
 
+# 
+# mpv
+#
 # mpv | help:  youtube-dl --list-formats URL
 # alias mpv="mpv --ytdl-format=22 $1"
 # mpv audio
@@ -48,6 +51,9 @@ alias pip="pip3"
 # alias mpvAl="mpv --ytdl-format=251 $1 --loop"
 # i got that mpv .lua script, dunno if i need these anymore
 # --no-video --loop
+# 
+# --- readding it
+alias mpva="mpv --no-video --loop"
 
 # pushd | popd | dirs -v
 alias cd="pushd"

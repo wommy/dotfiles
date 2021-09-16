@@ -70,8 +70,9 @@ call plug#begin('~/projects_current/dotfiles/.config/nvim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 " dunno what these do
 Plug 'prettier/vim-prettier'
