@@ -1,0 +1,2 @@
+picom &
+setxkbmap -option "caps:swapescape" -option "ctrl:swap_lalt_lctl" &
