@@ -86,6 +86,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'dracula/vim', {'as':'dracula'}
 
+" github copilot
+Plug 'github/copilot.vim'
+
 " couldnt find this again if i tried, dont think id even want to
 " plantuml
 " Plug 'aklt/plantuml-syntax'
