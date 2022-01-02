@@ -62,6 +62,13 @@ inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 
+" autoread || reload file on focus
+" https://stackoverflow.com/questions/2490227/how-does-vims-autoread-work/45428958#45428958
+" https://vim.fandom.com/wiki/Have_Vim_check_automatically_if_the_file_has_changed_externally
+set autoread
+au FocusGained,BufEnter * checktime
+
+
 """plug"""
 
 call plug#begin('~/projects_current/dotfiles/.config/nvim/plugged')
