@@ -47,6 +47,8 @@ https://shapeshed.com/vim-packages/
   - `ln -s /home/w0m/projects_current/dotfiles/.config/mpv ~/.config/`
 - aliash
 	- `ln -s projects_current/dotfiles/.aliash ~/`
+- rofi
+	-	`ln -s /home/w0m/projects_current/dotfiles/.config/rofi ~/.config/`
 
 ## other links
 
