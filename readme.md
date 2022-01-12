@@ -49,6 +49,8 @@ https://shapeshed.com/vim-packages/
 	- `ln -s projects_current/dotfiles/.aliash ~/`
 - rofi
 	-	`ln -s /home/w0m/projects_current/dotfiles/.config/rofi ~/.config/`
+- zathura
+	- `ln -s ~/dotfiles/.config/zathura ~/.config/zathura`
 
 ## other links
 
