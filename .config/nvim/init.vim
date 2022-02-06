@@ -68,6 +68,41 @@ nnoremap <leader>k :m .-2<CR>==
 set autoread
 au FocusGained,BufEnter * checktime
 
+let g:vim_vue_plugin_config = { 
+      \'syntax': {
+      \   'template': ['html'],
+      \   'script': ['javascript','typescript'],
+      \   'style': ['css'],
+      \},
+      \'full_syntax': [],
+      \'initial_indent': [],
+      \'attribute': 0,
+      \'keyword': 0,
+      \'foldexpr': 0,
+      \'debug': 0,
+      \}
+
+" Example
+autocmd FileType vue inoremap <buffer><expr> : InsertColon()
+
+function! InsertColon()
+  let tag = GetVueTag()
+  return tag == 'template' ? ':' : ': '
+endfunction
+
+" Example: set local options based on syntax
+function! OnChangeVueSyntax(syntax)
+  echom 'Syntax is '.a:syntax
+  if a:syntax == 'html'
+    setlocal commentstring=<!--%s-->
+    setlocal comments=s:<!--,m:\ \ \ \ ,e:-->
+  elseif a:syntax =~ 'css'
+    setlocal comments=s1:/*,mb:*,ex:*/ commentstring&
+  else
+    setlocal commentstring=//%s
+    setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+  endif
+endfunction
 
 """plug"""
 
@@ -95,6 +130,9 @@ Plug 'dracula/vim', {'as':'dracula'}
 
 " github copilot
 Plug 'github/copilot.vim'
+
+" vue
+Plug 'leafOfTree/vim-vue-plugin'
 
 " couldnt find this again if i tried, dont think id even want to
 " plantuml
