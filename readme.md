@@ -51,6 +51,8 @@ https://shapeshed.com/vim-packages/
 	-	`ln -s /home/w0m/projects_current/dotfiles/.config/rofi ~/.config/`
 - zathura
 	- `ln -s ~/dotfiles/.config/zathura ~/.config/zathura`
+- prettier
+	- `cd ; ln -s ~/path/to/dotfiles/.prettierrc.yml .`
 
 ## other links
 
