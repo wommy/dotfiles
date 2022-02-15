@@ -23,7 +23,7 @@ alias gitlog="git log --online --abrev-commit --decorate"
 alias bsstart="sudo browser-sync start -s --host 0.0.0.0 --no-open"
 
 # ls: dir first, colors
-alias ls="ls --group-directories-first --color=auto -a"
+alias ls="ls --group-directories-first --color=auto -aA"
 
 # rd stuffs
 alias rddate="echo $(date) >> ./$(date +'%m-%d').md"
@@ -62,7 +62,7 @@ alias cd="pushd"
 alias rd="cd ~/rd; git pull; nvim $(hostname).md;"
 alias rdc="wtmm"
 # dotfiles
-alias df="cd ~/Documents/dotfiles; git pull;"
+alias dot="cd ~/Documents/dotfiles; git pull;"
 
 # mkrepo
 # alias mkrepo='
@@ -91,5 +91,5 @@ alias vol1="pactl -- set-sink-volume 0 150%"
 alias wtmm="ssh -X wom@technomad.media"
 
 # bottomup paru
-alias paru=" paru --bottomup"
+alias paru="paru --bottomup"
 
