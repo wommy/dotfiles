@@ -1,2 +1,5 @@
 picom &
 setxkbmap -option "caps:swapescape" -option "ctrl:swap_lalt_lctl" &
+# set keyboard repeat rate
+xset r rate 300 50
+
