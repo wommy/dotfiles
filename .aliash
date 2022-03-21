@@ -20,7 +20,8 @@
 alias gitlog="git log --online --abrev-commit --decorate"
 
 # browser-sync
-alias bsstart="sudo browser-sync start -s --host 0.0.0.0 --no-open"
+# alias bsstart="sudo browser-sync start -s --host 0.0.0.0 --no-open"
+# browser-sync is dead
 
 # ls: dir first, colors
 alias ls="ls --group-directories-first --color=auto -aA"
