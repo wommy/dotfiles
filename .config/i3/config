@@ -87,6 +87,8 @@ mode "$mode_gaps_inner" {
 	bindsym Shift+0     gaps inner all set 0
 	bindsym Escape mode "default"
 }
+smart_gaps on
+smart_borders on
 
 bindsym $mod+j focus left
 bindsym $mod+Left focus left
