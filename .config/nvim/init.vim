@@ -108,7 +108,7 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 
 """plug"""
 
-call plug#begin('~/projects_current/dotfiles/.config/nvim/plugged')
+call plug#begin('~/dotfiles/.config/nvim/plugged')
 
 " needed
 Plug 'sheerun/vim-polyglot'
