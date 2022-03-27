@@ -27,9 +27,9 @@ alias gitlog="git log --online --abrev-commit --decorate"
 alias ls="ls --group-directories-first --color=auto -aA"
 
 # rd stuffs
-alias rddate="echo $(date) >> ./$(date +'%m-%d').md"
-alias rdsbj='echo $1 >> ./$(date +"%m-%d").md'
-alias rdnew="rddate; rdsbj $1"
+# alias rddate="echo $(date) >> ./$(date +'%m-%d').md"
+# alias rdsbj='echo $1 >> ./$(date +"%m-%d").md'
+# alias rdnew="rddate; rdsbj $1"
 
 # pushit
 alias pushit="git commit -am 'pushit'; git push"
@@ -39,8 +39,8 @@ alias pushitt="git commit -a; git push"
 alias redshift="redshift -P -O 4000"
 
 # python
-alias py="python3"
-alias pip="pip3"
+# alias py="python3"
+# alias pip="pip3"
 
 # 
 # mpv
