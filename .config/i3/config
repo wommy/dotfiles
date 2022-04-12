@@ -64,7 +64,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # pulse
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
+# bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+m exec terminal -e 'pulsemixer'
 # polybar
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 ###
