@@ -120,7 +120,7 @@ Plug 'tpope/vim-surround'
 Plug 'prettier/vim-prettier'
 
 " dunno what these do
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " Plug 'vimwiki/vimwiki'
 
 " ? FIXME
@@ -148,6 +148,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'aklt/plantuml-syntax'
 " Plug 'weirongxu/plantuml-previewer.vim' 
 " Plug 'tyru/open-browser.vim'
+
+""" tried vim-telescope , lost it in a git merge
+""" ditto with goyo , limelight
 
 call plug#end()
 
