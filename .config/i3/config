@@ -9,7 +9,8 @@ bindsym $mod+Shift+grave move scratchpad
 bindsym $mod+grave scratchpad show
 # i3bar
 bar {
-	font pango:DejaVu Sans Mono 11
+	# font pango:DejaVu Sans Mono 11
+	font pango:Comic Code Ligatures 12.5
 	status_command i3status
  	position top
 	# mode hide
