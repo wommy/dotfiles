@@ -152,6 +152,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 """ tried vim-telescope , lost it in a git merge
 """ ditto with goyo , limelight
 
+" git gutter
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 let g:dracula_colorterm = 0
