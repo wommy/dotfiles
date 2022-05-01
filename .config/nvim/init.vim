@@ -101,6 +101,8 @@ autocmd StdinReadPre * let s:std_in=1
 " Start NERDTree, unless a file or session is specified, eg. vim -S session_file.vim.
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif
+""" nerdtree options
+let NERDTreeShowHidden=1
 "
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
