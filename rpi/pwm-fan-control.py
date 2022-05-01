@@ -8,17 +8,21 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(14, GPIO.OUT)
 pwm = GPIO.PWM(14,100)
 
-print("\nPress Ctrl+C to quit \n")
+# print("\nPress Ctrl+C to quit \n")
 dc = 0
 pwm.start(dc)
 
 try:
     while True:
         # from https://stackoverflow.com/a/68323238
-        # proc1 = subprocess.run(["vcgencmd measure_temp"], stdout=subprocess.PIPE, shell=True)
+        # proc1 = subprocess.run(["vcgencmd measure_temp"], stdout=subprocess.PIPE)
         # proc2 = subprocess.run(["sed 's/[^0-9.]//g'"], input=proc1.stdout, stdout=subprocess.PIPE, shell=True)
         # temp = proc2.stdout.decode()
-        temp = subprocess.run(["vcgencmd measure_temp | sed 's/[^0-9.]//g'"], shell=True, stdout=subprocess.PIPE).stdout.decode()
+        # temp = subprocess.run(["vcgencmd measure_temp | sed 's/[^0-9.]//g'"], shell=True, stdout=subprocess.PIPE).stdout
+        # temp = vcgencmd.measure_temp()
+        # temp = subprocess.run(["vcgencmd measure_temp"], shell=True, stdout=subprocess.PIPE).stdout
+        temp = subprocess.run(["vcgencmd measure_temp | sed 's/[^0-9.]//g'"], shell=True, stdout=subprocess.PIPE).stdout
+        # tempF = float(temp)
         if round(float(temp)) >= 55:
             dc = 100
             pwm.ChangeDutyCycle(dc)
@@ -34,4 +38,4 @@ try:
 except KeyboardInterrupt:
     pwm.stop()
     GPIO.cleanup()
-    print("Ctrl + C pressed -- Ending program")
+    # print("Ctrl + C pressed -- Ending program")
