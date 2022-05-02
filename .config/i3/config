@@ -4,17 +4,17 @@
 set $mod Mod4
 set $term kitty
 # gaps
-gaps inner 10
+gaps inner 5
 # scratchpad
 bindsym $mod+Shift+grave move scratchpad
 bindsym $mod+grave scratchpad show
 # i3bar
 bar {
 	# font pango:DejaVu Sans Mono 11
-	font pango:Comic Code Ligatures 12.5
+	font pango:Comic Code Ligatures 8
 	status_command i3status
- 	position top
-	# mode hide
+ 	# position top
+	mode hide
 }
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
@@ -25,8 +25,8 @@ bindsym $mod+m bar mode toggle
 # autostart
 exec --no-startup-id picom
 exec --no-startup-id redshift
-exec --no-startup-id setxkbmap -option "caps:swapescape" -option "ctrl:swap_lalt_lctl"
-# exec --no-startup-id setxkbmap -option "ctrl:swap_lalt_lctl"
+# exec --no-startup-id setxkbmap -option "caps:swapescape" -option "ctrl:swap_lalt_lctl"
+exec --no-startup-id setxkbmap -option "ctrl:swap_lalt_lctl"
 exec --no-startup-id xset r rate 300 50
 
 # Use Mouse+$mod to drag floating windows to their wanted position
