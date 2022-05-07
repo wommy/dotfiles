@@ -1,15 +1,17 @@
 # pwm fan control: amalgam of 
 # - https://wiki.52pi.com/index.php?title=ZP-0110
 # - https://www.instructables.com/Smart-Control-of-Raspberry-Pi-Fan-Using-Python-Thi/
+# - https://stackoverflow.com/questions/4760215/running-shell-command-and-capturing-the-output
+# - https://discourse.osmc.tv/t/bash-vcgencmd-command-not-found/37733
 
 import RPi.GPIO as GPIO
 from time import sleep
-from subprocess import check_output
+from subprocess import run, PIPE
 from re import findall
 
 def get_temp():
-    temp = check_output(["vcgencmd", "measure_temp"]).decode()
-    temp = float( findall( '\d+\.\d+', temp )[0] )
+    temp = run(["/opt/vc/bin/vcgencmd measure_temp"], shell=True, stdout=PIPE).stdout.decode()
+    temp = float(findall('\d+\.\d+', temp)[0])
     return(temp)
 
 try:
@@ -30,7 +32,8 @@ try:
             pwm.ChangeDutyCycle(0)
             # print("off")
         # print(str(temp))
-        sleep(60)
+        # sleep(3)
+        sleep(90)
 except KeyboardInterrupt:
     pwm.stop()
 finally:
