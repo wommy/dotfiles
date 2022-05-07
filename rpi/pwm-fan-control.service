@@ -1,5 +1,0 @@
-[Unit]
-Description=python pwm fan control
-
-[Service]
-ExecStart=/usr/bin/python3 /usr/local/lib/pwm-fan-control/pwm-fan-control.py

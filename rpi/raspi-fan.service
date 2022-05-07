@@ -1,0 +1,10 @@
+[Unit]
+Description=raspi pwm fan-control in python
+After=network.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/wom/dotfiles/rpi/fan.py
+
+[Install]
+WantedBy=multi-user.target
