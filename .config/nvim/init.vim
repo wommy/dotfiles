@@ -130,7 +130,7 @@ Plug 'tpope/vim-fugitive'
 
 " ? FIXME
 " Plug 'ycm-core/YouCompleteMe'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'dracula/vim', {'as':'dracula'}
