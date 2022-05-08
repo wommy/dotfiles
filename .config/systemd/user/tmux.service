@@ -3,7 +3,7 @@ Description=Start tmux in detached session
 
 [Service]
 Type=forking
-ExecStart=/usr/bin/tmux -2 new -c ~/Documents -d
+ExecStart=/usr/bin/tmux new -2d
 ExecStop=/usr/bin/tmux kill-server
 
 [Install]
