@@ -24,6 +24,8 @@ set foldmethod=indent
 set foldlevelstart=2
 set foldlevel=2
 set laststatus=3
+""" mouse
+set mouse=a
 " rd maps i dont use anymore
 " nmap <F3> i<C-R>=strftime("%m-%d")<CR><Esc>
 " imap <F3> <C-R>=strftime("%m-%d")<CR>
