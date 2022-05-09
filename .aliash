@@ -61,9 +61,9 @@ alias cd="pushd"
 
 # rd
 alias rd="cd ~/rd; git pull; nvim $(hostname).md;"
-alias rdc="wtmm"
+# alias rdc="wtmm"
 # dotfiles
-alias dot="cd ~/Documents/dotfiles; git pull;"
+alias dot="cd ~/dotfiles; git pull;"
 
 # mkrepo
 # alias mkrepo='
