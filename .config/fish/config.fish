@@ -3,5 +3,5 @@ if status is-interactive
 end
 
 set -x fish_greeting
-set -gx PNPM_HOME "/home/wom/.local/share/pnpm"
+set -gx PNPM_HOME "/home/$USER/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
