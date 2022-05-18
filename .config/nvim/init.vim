@@ -124,20 +124,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'prettier/vim-prettier'
-
-" dunno what these do
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-" Plug 'vimwiki/vimwiki'
+Plug 'github/copilot.vim'
 
-" ? FIXME
+""" dunno what these do ? FIXME
+" Plug 'vimwiki/vimwiki'
 " Plug 'ycm-core/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'dracula/vim', {'as':'dracula'}
-
-" github copilot
-Plug 'github/copilot.vim'
 
 " vue
 " Plug 'leafOfTree/vim-vue-plugin'
@@ -158,8 +155,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 """ tried vim-telescope , lost it in a git merge
 """ ditto with goyo , limelight
 
-" git gutter
-Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -169,6 +164,5 @@ colorscheme dracula
 " let g:sublimemonokai_term_italic = 1
 " picom w/ ^
 " hi Normal ctermbg=NONE guibg=NONE
-
 " let g:vimwiki_list = [{'path': '~/projects_current/rd/vimwiki/'}]
 
