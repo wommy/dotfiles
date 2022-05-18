@@ -121,6 +121,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'prettier/vim-prettier'
@@ -131,7 +132,26 @@ Plug 'github/copilot.vim'
 """ dunno what these do ? FIXME
 " Plug 'vimwiki/vimwiki'
 " Plug 'ycm-core/YouCompleteMe'
+
+""" CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'do': 'pnpm i --frozen-lockfile'}
+""" coc extensions
+" Plug 'neoclide/coc-tsserver', {'do': 'pnpm i --frozen-lockfile'}
+Plug 'neoclide/coc-html', {'do': 'pnpm i --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'pnpm i --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'pnpm i --frozen-lockfile'}
+Plug 'neoclide/coc-emmet', {'do': 'pnpm i --frozen-lockfile'}
+""" disabled
+" Plug 'neoclide/coc-prettier', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'josa42/coc-sh', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'neoclide/coc-yaml', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'kkiyama117/coc-toml', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'neoclide/coc-highlight', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'neoclide/coc-eslint', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'gera2ld/coc-markmap', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'weirongxu/coc-markdown-preview-enhanced', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'yaegassy/coc-volar', {'do': 'pnpm i --frozen-lockfile'}
 
 " Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'dracula/vim', {'as':'dracula'}
@@ -155,6 +175,15 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 """ tried vim-telescope , lost it in a git merge
 """ ditto with goyo , limelight
 
+""" markdown
+Plug 'junegunn/goyo.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && pnpm i', 'for': 'markdown' }
+Plug 'sidofc/mkdx', { 'for': 'markdown' }
+Plug 'godlygeek/tabular', { 'for': 'markdown' }
+Plug 'preservim/vim-markdown', { 'for': 'markdown' }
+Plug 'scuilion/markdown-drawer', { 'for': 'markdown' }
+Plug 'clarke/vim-renumber', { 'for': 'markdown' }
+Plug 'farmergreg/vim-lastplace'
 
 call plug#end()
 
@@ -165,4 +194,9 @@ colorscheme dracula
 " picom w/ ^
 " hi Normal ctermbg=NONE guibg=NONE
 " let g:vimwiki_list = [{'path': '~/projects_current/rd/vimwiki/'}]
+""" markdown preview
+let g:mkdp_refresh_slow=1
+" let g:mkdp_markdown_css='~/dotfiles/.config/nvim/plugged/vim-markdown/css/github.css'
+let g:mkdp_markdown_css='~/.local/share/pnpm/global/5/node_modules/github-markdown-css/github-markdown.css'
+let g:mkdp_open_to_the_world = 1
 
