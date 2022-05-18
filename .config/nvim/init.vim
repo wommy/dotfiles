@@ -1,5 +1,6 @@
+" set encoding=UTF-8
 set nocompatible
-filetype plugin on
+filetype plugin indent on
 syntax on
 " in write mode, map super to esc
 " nmap <F3> i<C-R>=strftime("%m-%d")<CR><Esc>
@@ -8,24 +9,19 @@ syntax on
 " let g:netrw_winsize = 75
 " let g:netrw_liststyle = 3
 " let g:netrw_browse_split = 3
-set number
-set relativenumber
+set number relativenumber
 set nowrap
-set shiftwidth=2
-set tabstop=2
-set autoindent
-set smartindent
+set shiftwidth=2 tabstop=2 autoindent smartindent
 set so=999
 set clipboard+=unnamedplus
-set breakindent
-set breakindentopt=shift:2,min:40,sbr
-set showbreak=>>
-set foldmethod=indent
-set foldlevelstart=2
-set foldlevel=2
+set breakindent breakindentopt=shift:2,min:40,sbr showbreak=>> 
+set foldmethod=indent foldlevelstart=2 foldlevel=2
+
 set laststatus=3
-""" mouse
 set mouse=a
+set confirm
+set autoread wildmenu
+
 " rd maps i dont use anymore
 " nmap <F3> i<C-R>=strftime("%m-%d")<CR><Esc>
 " imap <F3> <C-R>=strftime("%m-%d")<CR>
@@ -58,9 +54,9 @@ nnoremap <leader>k :m .-2<CR>==
 " autoread || reload file on focus
 " https://stackoverflow.com/questions/2490227/how-does-vims-autoread-work/45428958#45428958
 " https://vim.fandom.com/wiki/Have_Vim_check_automatically_if_the_file_has_changed_externally
-set autoread
 au FocusGained,BufEnter * checktime
 
+""" gonna replace this with CoC plugin
 """""" vim vue
 "let g:vim_vue_plugin_config = { 
 "  \'syntax': {
