@@ -31,12 +31,13 @@ Plug 'prettier/vim-prettier'
 Plug 'github/copilot.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " :CocInstall coc-tsserver coc-json coc-html coc-css coc-emmet
-"
-""" coc extensions in npm , tudo later
-"" neoclide essential - coc.nvim coc-tsserver coc-json coc-html coc-css coc-emmet
-"" neoclide extra - coc-prettier coc-yaml coc-highlight coc-eslint
-"" others - 'josa42/coc-sh' 'kkiyama117/coc-toml' 'gera2ld/coc-markmap' 'weirongxu/coc-markdown-preview-enhanced' 
-" 'yaegassy/coc-volar'
+""" TODO coc extensions in npm , tudo later
+" Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'pnpm i --frozen-lockfile'}
+" Plug 'neoclide/coc-tsserver', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'neoclide/coc-json', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'neoclide/coc-html', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'neoclide/coc-css', {'do': 'pnpm i --frozen-lockfile'}
+" Plug 'neoclide/coc-emmet', {'do': 'pnpm i --frozen-lockfile'}
 "
 """ revisit: vim-telescope , limelight
 " Plug 'vimwiki/vimwiki'
@@ -122,6 +123,9 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 "
 let g:dracula_colorterm = 0
 colorscheme dracula
+
+""" coc global extensions
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-html', 'coc-css', 'coc-emmet']
 
 """ markdown preview
 "
