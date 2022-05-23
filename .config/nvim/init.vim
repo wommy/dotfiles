@@ -70,6 +70,7 @@ set laststatus=3
 set mouse=a
 set confirm
 set autoread wildmenu
+set cmdheight=2
 
 """ primeagen VIM REMAPS
 " 5 yank to end of line
