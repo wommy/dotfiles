@@ -1,3 +1,3 @@
-function ls --description 'alias ls ls --group-directories-first --color=auto -aAl'
- command ls --group-directories-first --color=auto -aAl $argv; 
+function ls --description 'alias ls ls --group-directories-first --color=auto -aA'
+ command ls --group-directories-first --color=auto -aA $argv; 
 end
