@@ -10,6 +10,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'rust-lang/rust.vim'
 Plug 'dracula/vim', {'as':'dracula'}
 " nerdtree & extensions
 Plug 'preservim/nerdtree'
