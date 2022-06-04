@@ -14,7 +14,7 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
+      icon-theme: "Dracula";
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
@@ -143,5 +143,8 @@ configuration {
       directories-first: true;
       sorting-method:    "name";
   }
+  icon {
+      theme: "Dracula";
+  }
 }
-@theme "/home/w0m/.config/rofi/themes/dracula1.rasi"
+@theme "/home/w0m/.config/rofi/themes/dracula2.rasi"
