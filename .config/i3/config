@@ -16,6 +16,9 @@ bar {
  	position top
 	# mode hide
 }
+# hide/unhide i3status bar
+bindsym $mod+m bar mode toggle
+
 # dota workspace9
 # assign [class="dota2"] 9
 #
