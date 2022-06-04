@@ -1,4 +1,4 @@
-" set encoding=UTF-8
+""" settings , options
 """plug"""
 call plug#begin('~/dotfiles/.config/nvim/plugged')
 Plug 'sheerun/vim-polyglot'
