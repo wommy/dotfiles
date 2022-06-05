@@ -147,4 +147,4 @@ configuration {
       theme: "Dracula";
   }
 }
-@theme "/home/w0m/.config/rofi/themes/dracula2.rasi"
+@theme "../themes/dracula2.rasi"
