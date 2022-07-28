@@ -1,0 +1,60 @@
+! reverse scroll - https://wiki.archlinux.org/title/Xmodmap#Reverse_scrolling
+! pointer = 1 2 3 5 4 7 6 8 9 10 11 12
+!! this errord, replaced wif
+pointer = 1 2 3 5 4 7 6 8 9 10
+
+!!! swap esc & super - https://wiki.archlinux.org/title/Xmodmap#Reassigning_modifiers_to_keys_on_your_keyboard
+!! next line: normal
+! keycode   9 = Escape NoSymbol Escape
+! keycode 133 = Super_L Super_L Super_L Super_L Caps_Lock Super_L Caps_Lock
+!! pseudo-code to du da ting
+!! just swap em?
+keycode   9 = Super_L Super_L Super_L Super_L Caps_Lock Super_L Caps_Lock
+keycode 133 = Escape NoSymbol Escape
+!! this kinda works on chromebook
+! didnt reset Super, caps is both super and esc
+
+!! prev cmd `xmodmap -pke` , below `xmodmap -pm`
+! shift       Shift_L (0x32),  Shift_R (0x3e)
+! lock        Caps_Lock (0x42)
+! control     Control_L (0x40),  Control_R (0x69)
+! mod1        Alt_L (0x25),  Meta_L (0xcd)
+! mod2        Num_Lock (0x4d)
+! mod3      
+! mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
+! mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
+
+!! brainstorming - i would need to clear lock & mod4
+
+! clear lock
+! clear mod4
+! keycode   9 = Super_L Super_L Super_L Super_L Caps_Lock Super_L Caps_Lock
+! keycode 133 = Escape NoSymbol Escape
+! add lock = Caps_Lock
+! add mod4 = Super_L
+!! this works how you'd think
+
+!! how can i regrain super_L being both super and esc
+
+!!! how to reset to original
+! clear lock
+! clear mod4
+! keycode   9 = Escape NoSymbol Escape
+! keycode 133 = Super_L Super_L Super_L Super_L Caps_Lock Super_L Caps_Lock
+! add lock = Caps_Lock
+! add mod4 = Super_L  Super_R  Super_L  Hyper_L
+!! so now we back to start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
