@@ -1,0 +1,5 @@
+- name: nala update
+  hosts: "*"
+  tasks:
+    - name: doas nala
+      shell: doas nala upgrade

@@ -1,0 +1,13 @@
+- hosts: "*"
+  become: true
+  tasks:
+    - name: apt
+      apt:
+        name: avahi-daemon
+        state: present
+        update_cache: true
+
+    - name: restart systemd
+      systemd:
+        name: avahi-daemon
+        state: started

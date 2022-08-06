@@ -1,0 +1,7 @@
+- hosts: "*"
+  tasks:
+    - apt:
+        name: kitty-terminfo
+        state: present
+        update_cache: true
+      become: true
