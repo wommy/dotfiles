@@ -43,7 +43,7 @@ let g:ale_disable_lsp = 1
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	" markdown
 	Plug 'junegunn/goyo.vim'
-	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && pnpm i', 'for': 'markdown' }
+	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install', 'for': 'markdown' }
 	" Plug 'sidofc/mkdx', { 'for': 'markdown' }
 	Plug 'godlygeek/tabular', { 'for': 'markdown' }
 	Plug 'preservim/vim-markdown', { 'for': 'markdown' }
@@ -183,10 +183,17 @@ let g:ale_disable_lsp = 1
 let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-html', 'coc-css', 'coc-emmet']
 
 """ markdown preview
-	let g:mkdp_refresh_slow=1
+	" let g:mkdp_refresh_slow=1
 	" let g:mkdp_markdown_css='~/dotfiles/.config/nvim/plugged/vim-markdown/css/github.css'
-	let g:mkdp_markdown_css='~/.local/share/pnpm/global/5/node_modules/github-markdown-css/github-markdown.css'
+	" let g:mkdp_markdown_css='~/.local/share/pnpm/global/5/node_modules/github-markdown-css/github-markdown.css'
 	let g:mkdp_open_to_the_world = 1
+	" let g:mkdp_open_ip = '192.168.10.62' " change to you vps or vm ip
+	let g:mkdp_port = 8080
+	" function! g:EchoUrl(url)
+	" 		:echo a:url
+	" endfunction
+	" let g:mkdp_browserfunc = 'g:EchoUrl'
+	let g:mkdp_echo_preview_url = 1
 """
 
 """ preservim/vim-markdown
