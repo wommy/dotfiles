@@ -1,0 +1,4 @@
+- hosts: all
+  name: check apt-cache-proxy
+  tasks:
+    - shell: cat /etc/apt/apt.conf.d/00aptproxy;
