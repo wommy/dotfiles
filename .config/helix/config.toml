@@ -1,0 +1,14 @@
+theme = "dracula_at_night"
+
+[editor]
+scrolloff = 99
+line-number = "relative"
+true-color = true
+bufferline = "multiple"
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+
