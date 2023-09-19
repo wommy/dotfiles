@@ -17,7 +17,7 @@
 "
 let g:ale_disable_lsp = 1
 """plug
-	call plug#begin('~/dotfiles/.config/nvim/plugged')
+	call plug#begin('~/.config/nvim/plugged')
 	" Plug 'sheerun/vim-polyglot'
 	Plug 'dracula/vim', {'as':'dracula'}
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
