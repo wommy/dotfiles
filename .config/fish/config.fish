@@ -3,7 +3,11 @@ if status is-interactive
 end
 
 set -x fish_greeting
+
 # pnpm
-set -gx PNPM_HOME "$HOME/.local/share/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
+set -x PNPM_HOME $HOME/.local/share/pnpm
+set -x PATH $PATH $PNPM_HOME
 # pnpm end
+# rust
+set -x CARGO $HOME/.cargo
+set -x PATH $PATH $CARGO/bin
