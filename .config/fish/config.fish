@@ -11,3 +11,6 @@ set -x PATH $PATH $PNPM_HOME
 # rust
 set -x CARGO $HOME/.cargo
 set -x PATH $PATH $CARGO/bin
+# go
+set -x GOPATH $HOME/.local/share/go
+set -x PATH $PATH $GOPATH/bin
