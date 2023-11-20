@@ -82,11 +82,6 @@
 ----
 
 vim.cmd [[
-""" plug
-	call plug#begin('~/.config/nvim/plugged')
-	call plug#end()
-"""
-
 """ MISC
 	""" rd maps i dont use anymore
 		" nmap <F3> i<C-R>=strftime("%m-%d")<CR><Esc>
