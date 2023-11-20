@@ -1,3 +1,4 @@
+vim.cmd [[
 """ settings , options
 	filetype plugin indent on
 	syntax on
@@ -239,3 +240,4 @@
 			"""
 	"""
 """
+]]
