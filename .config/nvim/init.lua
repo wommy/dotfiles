@@ -1,10 +1,8 @@
 vim.cmd [[
 """ settings , options
-	filetype plugin indent on
-	syntax on
 	set number relativenumber
 	set nowrap
-	set shiftwidth=2 tabstop=2 autoindent smartindent
+	set shiftwidth=2 tabstop=2 smartindent
 	set scrolloff=999
 	set clipboard+=unnamedplus
 	set breakindent breakindentopt=shift:2,min:40,sbr showbreak=>> 
@@ -12,7 +10,6 @@ vim.cmd [[
 	set laststatus=3
 	set mouse=a
 	set confirm
-	set autoread wildmenu
 	set cmdheight=2
 """
 
