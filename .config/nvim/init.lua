@@ -1,4 +1,4 @@
---- settings , options
+---- settings , options
 	vim.opt.number=true
 	vim.opt.relativenumber=true
 	vim.opt.wrap=false
@@ -17,57 +17,73 @@
 	vim.opt.mouse='a'
 	vim.opt.confirm=true
 	vim.opt.cmdheight=2
----
+	vim.g.mapleader = " "
+	vim.g.maplocalleader = " "
+----
+
+---- lazy.nvim
+	local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+	if not vim.loop.fs_stat(lazypath) then
+		vim.fn.system({
+			"git", "clone", "https://github.com/folke/lazy.nvim.git",
+			"--filter=blob:none", "--branch=stable", lazypath,
+		})
+	end
+	vim.opt.rtp:prepend(lazypath)
+
+	require("lazy").setup({
+		-- 'sheerun/vim-polyglot',
+		{ 'dracula/vim', name='dracula', },
+		{ 'neoclide/coc.nvim', branch='release', },
+		'mattn/emmet-vim',
+		'jiangmiao/auto-pairs',
+		'tpope/vim-commentary',
+		'tpope/vim-surround',
+		'tpope/vim-fugitive',
+		'prettier/vim-prettier',
+		'farmergreg/vim-lastplace',
+		'airblade/vim-gitgutter',
+		'vim-airline/vim-airline',
+		'vim-airline/vim-airline-themes',
+		'dense-analysis/ale',
+		{ 'nvim-treesitter/nvim-treesitter', build=':TSUpdate', },
+		-- 'github/copilot.vim',
+		-- { 'rust-lang/rust.vim', ft='rust', },
+
+		---- nerdtree & extensions
+		'preservim/nerdtree',
+		'Xuyuanp/nerdtree-git-plugin',
+		'ryanoasis/vim-devicons',
+		'tiagofumo/vim-nerdtree-syntax-highlight',
+		---- markdown
+		'junegunn/goyo.vim',
+		{ 'iamcco/markdown-preview.nvim', build='cd app && yarn install', ft='markdown', },
+		-- { 'sidofc/mkdx', ft='markdown', },
+		{ 'godlygeek/tabular', ft='markdown', },
+		{ 'preservim/vim-markdown', ft='markdown', },
+		{ 'scuilion/markdown-drawer', ft='markdown', },
+		{ 'clarke/vim-renumber', ft='markdown', },
+
+		---- additional setup
+		---- :CocInstall coc-tsserver coc-json coc-html coc-css coc-emmet
+		---- TODO coc extensions in npm , tudo later
+			-- { 'neoclide/coc.nvim', branch='release', build='pnpm i --frozen-lockfile', }
+			-- { 'neoclide/coc-tsserver', build='pnpm i --frozen-lockfile', }
+			-- { 'neoclide/coc-json', build='pnpm i --frozen-lockfile', }
+			-- { 'neoclide/coc-html', build='pnpm i --frozen-lockfile', }
+			-- { 'neoclide/coc-css', build='pnpm i --frozen-lockfile', }
+			-- { 'neoclide/coc-emmet', build='pnpm i --frozen-lockfile', }
+		---- revisit: vim-telescope , limelight
+			-- 'vimwiki/vimwiki',
+			-- 'ycm-core/YouCompleteMe',
+			-- 'ErichDonGubler/vim-sublime-monokai',
+		----
+	})
+----
+
 vim.cmd [[
 """ plug
 	call plug#begin('~/.config/nvim/plugged')
-	" Plug 'sheerun/vim-polyglot'
-	Plug 'dracula/vim', {'as':'dracula'}
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'mattn/emmet-vim'
-	Plug 'jiangmiao/auto-pairs'
-	Plug 'tpope/vim-commentary'
-	Plug 'tpope/vim-surround'
-	Plug 'tpope/vim-fugitive'
-	Plug 'prettier/vim-prettier'
-	Plug 'farmergreg/vim-lastplace'
-	Plug 'airblade/vim-gitgutter'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'dense-analysis/ale'
-	Plug 'nvim-treesitter/nvim-treesitter'
-	" Plug 'github/copilot.vim'
-	" Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-	"
-	" nerdtree & extensions
-	Plug 'preservim/nerdtree'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-	" markdown
-	Plug 'junegunn/goyo.vim'
-	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install', 'for': 'markdown' }
-	" Plug 'sidofc/mkdx', { 'for': 'markdown' }
-	Plug 'godlygeek/tabular', { 'for': 'markdown' }
-	Plug 'preservim/vim-markdown', { 'for': 'markdown' }
-	Plug 'scuilion/markdown-drawer', { 'for': 'markdown' }
-	Plug 'clarke/vim-renumber', { 'for': 'markdown' }
-	" additional setup
-
-	" :CocInstall coc-tsserver coc-json coc-html coc-css coc-emmet
-	""" TODO coc extensions in npm , tudo later
-		" Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'pnpm i --frozen-lockfile'}
-		" Plug 'neoclide/coc-tsserver', {'do': 'pnpm i --frozen-lockfile'}
-		" Plug 'neoclide/coc-json', {'do': 'pnpm i --frozen-lockfile'}
-		" Plug 'neoclide/coc-html', {'do': 'pnpm i --frozen-lockfile'}
-		" Plug 'neoclide/coc-css', {'do': 'pnpm i --frozen-lockfile'}
-		" Plug 'neoclide/coc-emmet', {'do': 'pnpm i --frozen-lockfile'}
-	"""
-		""" revisit: vim-telescope , limelight
-		" Plug 'vimwiki/vimwiki'
-		" Plug 'ycm-core/YouCompleteMe'
-		" Plug 'ErichDonGubler/vim-sublime-monokai'
-	"""
 	call plug#end()
 """
 
