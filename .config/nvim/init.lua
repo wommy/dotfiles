@@ -22,7 +22,7 @@
 	vim.opt.termguicolors = true
 ----
 
----- lazy.nvim
+---- package manager: lazy.nvim
 	local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 	if not vim.loop.fs_stat(lazypath) then
 		vim.fn.system({
@@ -32,14 +32,13 @@
 	end
 	vim.opt.rtp:prepend(lazypath)
 
+	---- package list
 	require("lazy").setup({
 		-- 'sheerun/vim-polyglot',
-		{ 'dracula/vim', name='dracula', priority=1000,
-			config=function()
-				vim.g.dracula_colorterm = 0
-				vim.cmd.colorscheme 'dracula'
-			end,
-		},
+		{ 'dracula/vim', name='dracula', priority=1000, config=function()
+			vim.g.dracula_colorterm = 0
+			vim.cmd.colorscheme 'dracula'
+		end},
 		{ 'neoclide/coc.nvim', branch='release', },
 		'mattn/emmet-vim',
 		'jiangmiao/auto-pairs',
@@ -51,7 +50,10 @@
 		'airblade/vim-gitgutter',
 		'vim-airline/vim-airline',
 		'vim-airline/vim-airline-themes',
-		'dense-analysis/ale',
+		{ 'dense-analysis/ale', config=function()
+			vim.g.ale_disable_lsp=1
+			vim.g.ale_linters={javascript='eslint'}
+		end},
 		{ 'nvim-treesitter/nvim-treesitter', build=':TSUpdate', },
 		-- 'github/copilot.vim',
 		-- { 'rust-lang/rust.vim', ft='rust', },
@@ -63,10 +65,23 @@
 		'tiagofumo/vim-nerdtree-syntax-highlight',
 		---- markdown
 		'junegunn/goyo.vim',
-		{ 'iamcco/markdown-preview.nvim', build='cd app && yarn install', ft='markdown', },
+		{ "iamcco/markdown-preview.nvim", build='pnpm up && cd app && pnpm install',
+			cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+			-- config=function() ---- TODO fix
+				-- vim.g.mkdp_refresh_slow=1
+				-- vim.g.mkdp_markdown_css=''
+				-- vim.g.mkdp_open_to_the_world=1
+				-- vim.g.mkdp_port=8080
+				-- vim.g.mkdp_browserfunc = function(url) print(a.url) end
+				-- vim.g.mkdp_echo_preview_url = 1
+			-- end,
+		init=function() vim.g.mkdp_filetypes={"markdown"} end, ft = { "markdown" }, },
 		-- { 'sidofc/mkdx', ft='markdown', },
 		{ 'godlygeek/tabular', ft='markdown', },
-		{ 'preservim/vim-markdown', ft='markdown', },
+		{ 'preservim/vim-markdown', config=function()
+			vim.g.vim_markdown_frontmatter = 1
+			-- vim.g.vim_markdown_new_list_item_indent = 2
+		end, ft='markdown', },
 		{ 'scuilion/markdown-drawer', ft='markdown', },
 		{ 'clarke/vim-renumber', ft='markdown', },
 
@@ -125,14 +140,6 @@ vim.cmd [[
 		nnoremap <leader>k :m .-2<CR>==
 	"""
 
-	""" ALE
-		let g:ale_disable_lsp = 1
-
-		let g:ale_linters = {
-		\ 'javascript': ['eslint'],
-		\}
-	"""
-
 	""" autoread || reload file on focus
 		" https://stackoverflow.com/questions/2490227/how-does-vims-autoread-work/45428958#45428958
 		" https://vim.fandom.com/wiki/Have_Vim_check_automatically_if_the_file_has_changed_externally
@@ -156,25 +163,6 @@ vim.cmd [[
 		" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
 		autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
 				\ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
-	"""
-
-	""" markdown preview
-		" let g:mkdp_refresh_slow=1
-		" let g:mkdp_markdown_css='~/dotfiles/.config/nvim/plugged/vim-markdown/css/github.css'
-		" let g:mkdp_markdown_css='~/.local/share/pnpm/global/5/node_modules/github-markdown-css/github-markdown.css'
-		let g:mkdp_open_to_the_world = 1
-		" let g:mkdp_open_ip = '192.168.10.62' " change to you vps or vm ip
-		let g:mkdp_port = 8080
-		" function! g:EchoUrl(url)
-		" 		:echo a:url
-		" endfunction
-		" let g:mkdp_browserfunc = 'g:EchoUrl'
-		let g:mkdp_echo_preview_url = 1
-	"""
-
-	""" preservim/vim-markdown
-		let g:vim_markdown_frontmatter = 1
-		" let g:vim_markdown_new_list_item_indent = 2
 	"""
 
 	""" coc settings, trial period
