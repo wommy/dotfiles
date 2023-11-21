@@ -19,6 +19,7 @@
 	vim.opt.cmdheight=2
 	vim.g.mapleader = " "
 	vim.g.maplocalleader = " "
+	vim.opt.termguicolors = true
 ----
 
 ---- lazy.nvim
@@ -33,7 +34,12 @@
 
 	require("lazy").setup({
 		-- 'sheerun/vim-polyglot',
-		{ 'dracula/vim', name='dracula', },
+		{ 'dracula/vim', name='dracula', priority=1000,
+			config=function()
+				vim.g.dracula_colorterm = 0
+				vim.cmd.colorscheme 'dracula'
+			end,
+		},
 		{ 'neoclide/coc.nvim', branch='release', },
 		'mattn/emmet-vim',
 		'jiangmiao/auto-pairs',
@@ -117,11 +123,6 @@ vim.cmd [[
 		inoremap <C-k> <esc>:m .-2<CR>==
 		nnoremap <leader>j :m .+1<CR>==
 		nnoremap <leader>k :m .-2<CR>==
-	"""
-
-	""" dracula
-		let g:dracula_colorterm = 0
-		colorscheme dracula
 	"""
 
 	""" ALE
