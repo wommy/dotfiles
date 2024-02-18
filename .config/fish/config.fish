@@ -12,5 +12,6 @@ set -x PATH $PATH $PNPM_HOME
 set -x CARGO $HOME/.cargo
 set -x PATH $PATH $CARGO/bin
 # go
-set -x GOPATH $HOME/.local/share/go
-set -x PATH $PATH $GOPATH/bin
+set -x GOROOT /usr/local/go
+set -x GOBIN /usr/local/go/bin
+set -x PATH $PATH $GOBIN
