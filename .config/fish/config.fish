@@ -15,3 +15,6 @@ set -x PATH $PATH $CARGO/bin
 set -x GOROOT /usr/local/go
 set -x GOBIN /usr/local/go/bin
 set -x PATH $PATH $GOBIN
+# zig
+set -x ZIG_PATH $HOME/.local/share/zig-0.12.0/
+set -x PATH $PATH $ZIG_PATH
