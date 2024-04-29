@@ -4,6 +4,9 @@ end
 
 set -x fish_greeting
 
+## ABBRs newer
+abbr -a rsync rsync --info=stats1,progress2 --modify-window=1 -vzhPiSrn
+
 # pnpm
 set -x PNPM_HOME $HOME/.local/share/pnpm
 set -x PATH $PATH $PNPM_HOME
