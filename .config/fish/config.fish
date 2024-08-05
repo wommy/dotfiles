@@ -6,15 +6,17 @@ set -x fish_greeting
 
 ## ABBRs newer
 abbr -a rsync rsync --info=stats1,progress2 --modify-window=1 -vzhPiSrn
+abbr -a ls eza -a --git --group-directories-first --git-ignore
+abbr -a ll eza -a --git --group-directories-first --git-ignore --tree -L 3
 
-# pnpm
+## pnpm
 set -x PNPM_HOME $HOME/.local/share/pnpm
 set -x PATH $PATH $PNPM_HOME
-# pnpm end
-# rust
+## pnpm end
+## rust
 set -x CARGO $HOME/.cargo
 set -x PATH $PATH $CARGO/bin
-# go
+## go
 set -x GOROOT /usr/local/go
 set -x GOBIN /usr/local/go/bin
 set -x PATH $PATH $GOBIN
