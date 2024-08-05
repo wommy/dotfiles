@@ -22,8 +22,9 @@ set -x CARGO $HOME/.cargo
 set -x PATH $PATH $CARGO/bin
 ## go
 set -x GOROOT /usr/local/go
-set -x GOBIN usr/local/go/bin
+set -x GOBIN $GOROOT/bin
 set -x PATH $PATH $GOBIN
+set -x GOPATH $LOCAL_SHARE/go
 # zig
 set -x PATH $PATH $LOCAL_SHARE/zig-0.12.0/
 ## bun
