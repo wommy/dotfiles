@@ -4,11 +4,23 @@ end
 
 set -x fish_greeting
 
-## ABBRs newer
+## ABBRs newer, native
 abbr -a rsync rsync --info=stats1,progress2 --modify-window=1 -vzhPiSrn
-abbr -a ls eza -a --git --group-directories-first --git-ignore
-abbr -a ll eza -a --git --group-directories-first --git-ignore --tree -L 3
-abbr -a cat bat
+abbr -a diff git diff --color-words
+
+### program derrived
+## cargo install eza
+abbr -a ls eza --group-directories-first -a --git --git-ignore
+abbr -a ll eza --group-directories-first -a --git --git-ignore --tree -L 3
+## cargo install --locked bat
+abbr -a cat bat --paging=never
+## git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install ;
+fzf --fish | source
+abbr -a fzfp fzf --preview \'bat --style numbers --colors always {}\'
+## cargo install zoxide --locked
+zoxide init fish | source
+## nala install thefuck
+# thefuck --alias tf | source
 
 ## local share var
 set -x LOCAL_SHARE $HOME/.local/share 
