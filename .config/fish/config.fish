@@ -8,18 +8,19 @@ set -x fish_greeting
 abbr -a rsync rsync --info=stats1,progress2 --modify-window=1 -vzhPiSrn
 abbr -a diff git diff --color-words
 
-### program derrived
-## cargo install eza
-abbr -a ls eza --group-directories-first -a --git --git-ignore
-abbr -a ll eza --group-directories-first -a --git --git-ignore --tree -L 3
-## cargo install --locked bat
+### programs derrived
+### cargo install eza ; cargo install --locked bat ; cargo install zoxide --locked ; nala install thefuck -y ; git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install ;
+###
+## cargo install eza ;
+abbr -a ls eza --group-directories-first -a --git --git-ignore --tree -L 1
+## cargo install --locked bat ;
 abbr -a cat bat --paging=never
 ## git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install ;
 fzf --fish | source
 abbr -a fzfp fzf --preview \'bat --style numbers --colors always {}\'
-## cargo install zoxide --locked
+## cargo install zoxide --locked ;
 zoxide init fish | source
-## nala install thefuck
+## nala install thefuck -y ;
 # thefuck --alias tf | source
 
 ## local share var
